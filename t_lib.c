@@ -17,7 +17,7 @@ void t_yield()
   if(ready){	
     enq(running);
     deq();
-	swapcontext(rear->thread_context, running->thread_context);
+	  swapcontext(rear->thread_context, running->thread_context);
   }
 }
 
@@ -97,6 +97,7 @@ void t_shutdown(){
 void t_terminate(){
 	deq(ready);
 	
+	free(tmp->thread_context);
 	free(tmp);
 	tmp = NULL;
 

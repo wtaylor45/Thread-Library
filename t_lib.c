@@ -7,7 +7,7 @@ tcb *ready;
 /* Rear pointer, tmp to free memeory, and queue size */
 tcb *rear;
 tcb *tmp;
-int queue_size = 0;
+int queue_size = 0;   
 
 /*
  * Relinquishes control of the CPU to the first thread in the ready queue (if one exists) 
